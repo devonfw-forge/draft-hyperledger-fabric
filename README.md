@@ -201,7 +201,7 @@ Response
   "jsonrpc": "2.0",
   "result": {
     "status": "OK",
-    "message": "{\"users\":[{\"password\":\"123456\",\"participant-type\":\"employee\"}]}"
+    "message": "{\"users\":[{\"username\":\"username@capgemini.com\",\"password\":\"123456\",\"participant-type\":\"employee\"},{\"username\":\"username2@capgemini.com\",\"password\":\"123456\",\"participant-type\":\"employee\"},{\"username\":\"username3@capgemini.com\",\"password\":\"123456\",\"participant-type\":\"employee\"}]}"
   },
   "id": 5
 }
