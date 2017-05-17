@@ -269,3 +269,34 @@ Response
   "id": 7
 }
 ```
+
+#### Get all images 
+Request
+```
+{
+  "jsonrpc": "2.0",
+  "method": "query",
+  "params": {
+    "type": 1,
+    "chaincodeID": {
+      "name": "5980d1be56f097d358ce1f776d4ff8ad3e869024499cf8c30962ec1dad583668a736258f78454d93663e82fc893033faa9a8509603d49fe277f522bc76f98134"
+    },
+    "ctorMsg": {
+      "function": "GetImages"
+    },
+    "secureContext": "WebAppAdmin"
+  },
+  "id": 8
+}
+```
+Response
+```
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "status": "OK",
+    "message": "{\"images\":[{\"id\":\"IMG1\",\"name\":\"UNDEFINED\",\"author\":\"ildogesto\",\"url\":\"http://www.istockphoto.com/vector/flat-design-icons-for-business-and-finance-gm509786662-85956153\",\"user\":\"username@capgemini.com\",\"md5-hash\":\"UNDEFINED\",\"remarks\":\"UNDEFINED\",\"purchase-date\":\"UNDEFINED\",\"status\":1},{\"id\":\"IMG2\",\"name\":\"UNDEFINED\",\"author\":\"erhui1979\",\"url\":\"http://www.istockphoto.com/vector/teamwork-gm517994151-49374946\",\"user\":\"username2@capgemini.com\",\"md5-hash\":\"UNDEFINED\",\"remarks\":\"UNDEFINED\",\"purchase-date\":\"UNDEFINED\",\"status\":1}]}"
+  },
+  "id": 8
+}
+```
