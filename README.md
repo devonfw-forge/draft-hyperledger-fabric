@@ -81,7 +81,7 @@ Request
     },
     "secureContext": "WebAppAdmin"
   },
-  "id": 1
+  "id": 2
 }
 ```
 Response
@@ -92,7 +92,7 @@ Response
     "status": "OK",
     "message": "5b9177c4-778a-4cbd-a35a-2a92d16ff02b"
   },
-  "id": 1
+  "id": 2
 }
 ```
 #### Deliver Image:
@@ -112,7 +112,7 @@ Request
     },
     "secureContext": "WebAppAdmin"
   },
-  "id": 1
+  "id": 3
 }
 ```
 
@@ -125,7 +125,7 @@ Response
     "status": "OK",
     "message": "3358adf3-fa91-4bdd-9ad2-9a4a823423dd"
   },
-  "id": 1
+  "id": 3
 }
 ```
 
@@ -147,7 +147,7 @@ Request
     },
     "secureContext": "WebAppAdmin"
   },
-  "id": 3
+  "id": 4
 }
 ```
 
@@ -159,7 +159,7 @@ Response (successful Authentication)
     "status": "OK",
     "message": "{\"User\":{\"password\":\"123456\",\"participant-type\":\"employee\"},\"Authenticated\":true}"
   },
-  "id": 3
+  "id": 4
 }
 ```
 
@@ -171,7 +171,7 @@ Response (failed Authentication)
     "status": "OK",
     "message": "{\"User\":{\"password\":\"\",\"participant-type\":\"\"},\"Authenticated\":false}"
   },
-  "id": 3
+  "id": 4
 }
 ```
 
@@ -192,7 +192,7 @@ Request
     },
     "secureContext": "WebAppAdmin"
   },
-  "id": 2
+  "id": 5
 }
 ```
 Response
@@ -203,7 +203,7 @@ Response
     "status": "OK",
     "message": "{\"users\":[{\"password\":\"123456\",\"participant-type\":\"employee\"}]}"
   },
-  "id": 2
+  "id": 5
 }
 ```
 
@@ -224,7 +224,7 @@ Request
     },
     "secureContext": "WebAppAdmin"
   },
-  "id": 2
+  "id": 6
 }
 ```
 Response
@@ -235,7 +235,7 @@ Response
     "status": "OK",
     "message": "{\"id\":\"IMG1\",\"name\":\"UNDEFINED\",\"author\":\"ildogesto\",\"url\":\"http://www.istockphoto.com/vector/flat-design-icons-for-business-and-finance-gm509786662-85956153\",\"user\":\"username@capgemini.com\",\"md5-hash\":\"UNDEFINED\",\"remarks\":\"UNDEFINED\",\"purchase-date\":\"UNDEFINED\",\"status\":1}"
   },
-  "id": 2
+  "id": 6
 }
 ```
 #### Get Images by User
@@ -255,7 +255,7 @@ Request
     },
     "secureContext": "WebAppAdmin"
   },
-  "id": 2
+  "id": 7
 }
 ```
 Response
@@ -266,6 +266,6 @@ Response
     "status": "OK",
     "message": "{\"images\":[{\"id\":\"IMG1\",\"name\":\"UNDEFINED\",\"author\":\"ildogesto\",\"url\":\"http://www.istockphoto.com/vector/flat-design-icons-for-business-and-finance-gm509786662-85956153\",\"user\":\"username@capgemini.com\",\"md5-hash\":\"UNDEFINED\",\"remarks\":\"UNDEFINED\",\"purchase-date\":\"UNDEFINED\",\"status\":1}]}"
   },
-  "id": 2
+  "id": 7
 }
 ```
