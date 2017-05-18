@@ -57,6 +57,7 @@ type Image struct {
 
 type User struct {
 
+	Username        string      `json:"username"`
 	Password 		string 		`json:"password"`
 	PType           string      `json:"participant-type"`
 
@@ -130,6 +131,14 @@ func GetIndex(stub shim.ChaincodeStubInterface, indexName string) ([]string, err
 //=======================================================================================================================
 
 func AddIDToIndex(stub shim.ChaincodeStubInterface, indexName string, id string) ([]byte, error) {
+
+	result, err := DoesIDExist(stub, id, indexName)
+	
+	if result == true {
+		
+		return nil, errors.New("ID already exists")
+	
+	}
 
 	index, err := GetIndex(stub, indexName)
 	
@@ -219,6 +228,7 @@ func addUser(stub shim.ChaincodeStubInterface, index string, userJSONObject stri
 
 func DemandImage(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 
+
 	if len(args) != 1 {
 	
         logger.Debug("Invalid number of args")
@@ -282,6 +292,7 @@ func DeliverImage(stub shim.ChaincodeStubInterface, args []string) ([]byte, erro
 	image.MD5Hash = MD5Hash
 	image.PurchaseDate = PurchaseDate
 	image.Name = Name
+	image.Status = 2
 	
 	imageBytes, err = json.Marshal(&image)
 	
@@ -490,6 +501,8 @@ func GetAllUsers(stub shim.ChaincodeStubInterface) ([]User, error) {
 			return []User{}, errors.New("Error while unmarshalling user, reason: " + err.Error())
 			
 		}
+		
+		user.Username = userID
 
 		users = append(users, user)
 		
@@ -575,6 +588,25 @@ func GetImages(stub shim.ChaincodeStubInterface) ([]byte, error) {
 
 	return json.Marshal( Images {Images: images})
 	
+}
+
+//=======================================================================================================================
+//  Check if ID already exists  
+//=======================================================================================================================
+
+func DoesIDExist(stub shim.ChaincodeStubInterface, id string, indexName string) (bool, error) {
+	index, err := GetIndex(stub, indexName)
+	if err != nil {
+		return false, err
+	}
+
+	for _, indexElement := range index {
+		if indexElement == id {
+			return true, nil
+		}
+	}
+
+	return false, nil
 }
 
 
