@@ -27,13 +27,13 @@ Response
   "jsonrpc": "2.0",
   "result": {
     "status": "OK",
-    "message": "5980d1be56f097d358ce1f776d4ff8ad3e869024499cf8c30962ec1dad583668a736258f78454d93663e82fc893033faa9a8509603d49fe277f522bc76f98134"
+    "message": "1f8dde6aca14d49e2281346019227c3971d2bc0aa4217f576c270af140398ba78edd268ddf3bdf5f0c884f000490304b633a23d5e2463c76b64d5e59c4071862"
   },
   "id": 0
 }
 ```
 ### Invoke Functions: 
-#### Add User: 
+#### Add user: 
 Request
 ```
 {
@@ -42,11 +42,11 @@ Request
   "params": {
     "type": 1,
     "chaincodeID": {
-      "name": " 5980d1be56f097d358ce1f776d4ff8ad3e869024499cf8c30962ec1dad583668a736258f78454d93663e82fc893033faa9a8509603d49fe277f522bc76f98134"
+      "name": " 1f8dde6aca14d49e2281346019227c3971d2bc0aa4217f576c270af140398ba78edd268ddf3bdf5f0c884f000490304b633a23d5e2463c76b64d5e59c4071862"
     },
     "ctorMsg": {
       "function": "addUser",
-      "args": ["yassin@capgemini.com","{\"password\":\"123456\", \"participant-type\":\"employee\"}"]
+      "args": ["username@capgemini.com","{\"password\":\"123456\", \"participant-type\":\"employee\"}"]
     },
     "secureContext": "WebAppAdmin"
   },
@@ -64,7 +64,7 @@ Response
   "id": 1
 }
 ```
-#### Demand Image: 
+#### Demand image: 
 Request
 ```
 {
@@ -73,11 +73,11 @@ Request
   "params": {
     "type": 1,
     "chaincodeID": {
-      "name": "5980d1be56f097d358ce1f776d4ff8ad3e869024499cf8c30962ec1dad583668a736258f78454d93663e82fc893033faa9a8509603d49fe277f522bc76f98134"
+      "name": "1f8dde6aca14d49e2281346019227c3971d2bc0aa4217f576c270af140398ba78edd268ddf3bdf5f0c884f000490304b633a23d5e2463c76b64d5e59c4071862"
     },
     "ctorMsg": {
       "function": "DemandImage",
-      "args": ["{\"id\":\"1XD\", \"name\":\"UNDEFINED\", \"author\" : \"ildogesto\", \"url\":\"http://www.istockphoto.com/vector/flat-design-icons-for-business-and-finance-gm509786662-85956153\", \"user\": \"yassin@capgemini.com\", \"md5-hash\" : \"UNDEFINED\", \"remarks\": \"UNDEFINED\", \"purchase-date\" : \"UNDEFINED\", \"status\":1}"]
+      "args": ["{\"id\":\"IMG1\", \"name\":\"UNDEFINED\", \"author\" : \"ildogesto\", \"url\":\"http://www.istockphoto.com/vector/flat-design-icons-for-business-and-finance-gm509786662-85956153\", \"user\": \"username@capgemini.com\", \"md5-hash\" : \"UNDEFINED\", \"remarks\": \"UNDEFINED\", \"purchase-date\" : \"UNDEFINED\", \"status\":1}"]
     },
     "secureContext": "WebAppAdmin"
   },
@@ -95,7 +95,7 @@ Response
   "id": 2
 }
 ```
-#### Deliver Image:
+#### Deliver image:
 Request
 ```
 {
@@ -104,11 +104,11 @@ Request
   "params": {
     "type": 1,
     "chaincodeID": {
-      "name": "5980d1be56f097d358ce1f776d4ff8ad3e869024499cf8c30962ec1dad583668a736258f78454d93663e82fc893033faa9a8509603d49fe277f522bc76f98134"
+      "name": "1f8dde6aca14d49e2281346019227c3971d2bc0aa4217f576c270af140398ba78edd268ddf3bdf5f0c884f000490304b633a23d5e2463c76b64d5e59c4071862"
     },
     "ctorMsg": {
       "function": "DeliverImage",
-      "args": ["1XD","search-icon.png","da39a3ee5e6b4b0d3255bfef95601890afd80709","11.05.2017"]
+      "args": ["IMG1","search-icon.png","da39a3ee5e6b4b0d3255bfef95601890afd80709","19.05.2017"]
     },
     "secureContext": "WebAppAdmin"
   },
@@ -130,7 +130,7 @@ Response
 ```
 
 ### Query Functions: 
-#### Authenticate As User:
+#### Authenticate as user:
 Request
 ```
 {
@@ -139,11 +139,11 @@ Request
   "params": {
     "type": 1,
     "chaincodeID": {
-      "name": "5980d1be56f097d358ce1f776d4ff8ad3e869024499cf8c30962ec1dad583668a736258f78454d93663e82fc893033faa9a8509603d49fe277f522bc76f98134"
+      "name": "1f8dde6aca14d49e2281346019227c3971d2bc0aa4217f576c270af140398ba78edd268ddf3bdf5f0c884f000490304b633a23d5e2463c76b64d5e59c4071862"
     },
     "ctorMsg": {
       "function": "AuthenticateAsUser",
-      "args": ["yassin@capgemini.com","123456"]
+      "args": ["username@capgemini.com","123456"]
     },
     "secureContext": "WebAppAdmin"
   },
@@ -175,7 +175,7 @@ Response (failed Authentication)
 }
 ```
 
-#### Get Users List: 
+#### Get users list: 
 Request
 
 ```
@@ -185,7 +185,7 @@ Request
   "params": {
     "type": 1,
     "chaincodeID": {
-      "name": "5980d1be56f097d358ce1f776d4ff8ad3e869024499cf8c30962ec1dad583668a736258f78454d93663e82fc893033faa9a8509603d49fe277f522bc76f98134"
+      "name": "1f8dde6aca14d49e2281346019227c3971d2bc0aa4217f576c270af140398ba78edd268ddf3bdf5f0c884f000490304b633a23d5e2463c76b64d5e59c4071862"
     },
     "ctorMsg": {
       "function": "getUsers"
@@ -207,7 +207,7 @@ Response
 }
 ```
 
-#### Get Image : 
+#### Get image by id: 
 Request
 ```
 {
@@ -216,7 +216,7 @@ Request
   "params": {
     "type": 1,
     "chaincodeID": {
-      "name": "5980d1be56f097d358ce1f776d4ff8ad3e869024499cf8c30962ec1dad583668a736258f78454d93663e82fc893033faa9a8509603d49fe277f522bc76f98134"
+      "name": "1f8dde6aca14d49e2281346019227c3971d2bc0aa4217f576c270af140398ba78edd268ddf3bdf5f0c884f000490304b633a23d5e2463c76b64d5e59c4071862"
     },
     "ctorMsg": {
       "function": "getImage",
@@ -233,12 +233,12 @@ Response
   "jsonrpc": "2.0",
   "result": {
     "status": "OK",
-    "message": "{\"id\":\"IMG1\",\"name\":\"UNDEFINED\",\"author\":\"ildogesto\",\"url\":\"http://www.istockphoto.com/vector/flat-design-icons-for-business-and-finance-gm509786662-85956153\",\"user\":\"username@capgemini.com\",\"md5-hash\":\"UNDEFINED\",\"remarks\":\"UNDEFINED\",\"purchase-date\":\"UNDEFINED\",\"status\":1}"
+    "message": "{\"id\":\"IMG1\",\"name\":\"UNDEFINED\",\"author\":\"ildogesto\",\"url\":\"http://www.istockphoto.com/vector/flat-design-icons-for-business-and-finance-gm509786662-85956153\",\"user\":\"username@capgemini.com\",\"md5-hash\":\"UNDEFINED\",\"remarks\":\"UNDEFINED\",\"purchase-date\":\"UNDEFINED\",\"status\":2}"
   },
   "id": 6
 }
 ```
-#### Get Images by User
+#### Get images by user
 Request
 ```
 {
@@ -247,7 +247,7 @@ Request
   "params": {
     "type": 1,
     "chaincodeID": {
-      "name": "5980d1be56f097d358ce1f776d4ff8ad3e869024499cf8c30962ec1dad583668a736258f78454d93663e82fc893033faa9a8509603d49fe277f522bc76f98134"
+      "name": "1f8dde6aca14d49e2281346019227c3971d2bc0aa4217f576c270af140398ba78edd268ddf3bdf5f0c884f000490304b633a23d5e2463c76b64d5e59c4071862"
     },
     "ctorMsg": {
       "function": "GetImagesByUser",
@@ -264,7 +264,7 @@ Response
   "jsonrpc": "2.0",
   "result": {
     "status": "OK",
-    "message": "{\"images\":[{\"id\":\"IMG1\",\"name\":\"UNDEFINED\",\"author\":\"ildogesto\",\"url\":\"http://www.istockphoto.com/vector/flat-design-icons-for-business-and-finance-gm509786662-85956153\",\"user\":\"username@capgemini.com\",\"md5-hash\":\"UNDEFINED\",\"remarks\":\"UNDEFINED\",\"purchase-date\":\"UNDEFINED\",\"status\":1}]}"
+    "message": "{\"images\":[{\"id\":\"IMG1\",\"name\":\"UNDEFINED\",\"author\":\"ildogesto\",\"url\":\"http://www.istockphoto.com/vector/flat-design-icons-for-business-and-finance-gm509786662-85956153\",\"user\":\"username@capgemini.com\",\"md5-hash\":\"UNDEFINED\",\"remarks\":\"UNDEFINED\",\"purchase-date\":\"UNDEFINED\",\"status\":2}]}"
   },
   "id": 7
 }
@@ -279,7 +279,7 @@ Request
   "params": {
     "type": 1,
     "chaincodeID": {
-      "name": "5980d1be56f097d358ce1f776d4ff8ad3e869024499cf8c30962ec1dad583668a736258f78454d93663e82fc893033faa9a8509603d49fe277f522bc76f98134"
+      "name": "1f8dde6aca14d49e2281346019227c3971d2bc0aa4217f576c270af140398ba78edd268ddf3bdf5f0c884f000490304b633a23d5e2463c76b64d5e59c4071862"
     },
     "ctorMsg": {
       "function": "GetImages"
@@ -295,7 +295,7 @@ Response
   "jsonrpc": "2.0",
   "result": {
     "status": "OK",
-    "message": "{\"images\":[{\"id\":\"IMG1\",\"name\":\"UNDEFINED\",\"author\":\"ildogesto\",\"url\":\"http://www.istockphoto.com/vector/flat-design-icons-for-business-and-finance-gm509786662-85956153\",\"user\":\"username@capgemini.com\",\"md5-hash\":\"UNDEFINED\",\"remarks\":\"UNDEFINED\",\"purchase-date\":\"UNDEFINED\",\"status\":1},{\"id\":\"IMG2\",\"name\":\"UNDEFINED\",\"author\":\"erhui1979\",\"url\":\"http://www.istockphoto.com/vector/teamwork-gm517994151-49374946\",\"user\":\"username2@capgemini.com\",\"md5-hash\":\"UNDEFINED\",\"remarks\":\"UNDEFINED\",\"purchase-date\":\"UNDEFINED\",\"status\":1}]}"
+    "message": "{\"images\":[{\"id\":\"IMG1\",\"name\":\"IMG1.jpge\",\"author\":\"ildogesto\",\"url\":\"http://www.istockphoto.com/vector/flat-design-icons-for-business-and-finance-gm509786662-85956153\",\"user\":\"username@capgemini.com\",\"md5-hash\":\"da39a3ee5e6b4b0d3255bfef95601890afd80709\",\"remarks\":\"UNDEFINED\",\"purchase-date\":\"19.05.2017\",\"status\":2},{\"id\":\"IMG2\",\"name\":\"UNDEFINED\",\"author\":\"erhui1979\",\"url\":\"http://www.istockphoto.com/vector/teamwork-gm517994151-49374946\",\"user\":\"username2@capgemini.com\",\"md5-hash\":\"UNDEFINED\",\"remarks\":\"UNDEFINED\",\"purchase-date\":\"UNDEFINED\",\"status\":1}]}"
   },
   "id": 8
 }
